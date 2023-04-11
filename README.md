@@ -89,6 +89,7 @@ The main idea of this report is to be able to answer questions about the busines
 Due to the semantic layer in dbt, it is possible to create and document metrics so that they are physically materialized in the warehouse. The advantage of this is that we can control the way certain measures are added and calculated.
 https://app.powerbi.com/view?r=eyJrIjoiYmQ3MGM0OTEtOGQyZi00ZDdjLTk1ZjEtNDg3OTc2Mjc1N2RiIiwidCI6Ijc0YzBjMjUwLTFjNzctNDA1ZC05YjFlLTlhYzFmNTA4YWJlMyIsImMiOjR9
 
+![pbi-deel](https://user-images.githubusercontent.com/85809276/231167572-fc0b964d-e349-4f1e-b87b-00e9a9872ae4.gif)
 
 # Part 2: Query implementation
 
