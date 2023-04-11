@@ -1,9 +1,12 @@
 version: 2
 
 metrics:
-  - name: revenue
-    label: revenue
+  - name: amount_usd
+    description: > 
+      This metric are in charge of calculate the amount usd in different dimensions like country_code
+    label: amount_usd
     model: ref('rpt_globepay')
+
     calculation_method: sum
     expression: amount_usd
 

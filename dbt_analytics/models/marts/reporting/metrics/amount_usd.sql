@@ -1,7 +1,7 @@
 select  * from
     {{
 metrics.calculate(
-metric('revenue'),
+metric('amount_usd'),
 grain='day',
 dimensions=['country_code']
 
