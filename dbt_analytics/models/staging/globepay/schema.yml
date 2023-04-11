@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stg_globepay__acceptance_report
+    description: "STG GLOBEPAY ACCEPTANCE REPORT - GLOBEPAY ACCEPTANCE REPORT"
+    columns:
+      - name: external_ref
+        description: ""
+      - name: status
+        description: ""
+      - name: source
+        description: ""
+      - name: ref
+        description: ""
+      - name: date_time
+        description: ""
+      - name: state
+        description: ""
+      - name: cvv_provided
+        description: ""
+      - name: amount
+        description: ""
+      - name: country
+        description: ""
+      - name: currency
+        description: ""
+      - name: rates
+        description: ""
+
+
+
+
+  - name: stg_globepay__chargeback_report
+    description: "STG  GLOBEPAY CHARGEBACK REPORT - GLOBEPAY CHARGEBACK REPORT"
+    columns:
+      - name: external_ref
+        description: ""
+      - name: status
+        description: ""
+      - name: source
+        description: ""
