@@ -1,0 +1,97 @@
+# File: my_project/models/dim_countries.yml
+
+version: 2
+
+
+models:
+
+  - name: dim_countries
+    description: >
+      This is a dbt model that selects the country_code, currency_code, and updated_at columns
+      from the dim_countries table in the dev_warehouse schema of the deel_analytics database.
+
+    columns:
+      - name: country_code
+        description: The country code.
+        tests: [unique, not_null]
+      - name: currency_code
+        description: The currency code.
+        tests: [unique, not_null]
+
+      - name: updated_at
+        description: The last updated timestamp.
+        tests: [not_null]
+
+  - name: dim_dates
+    description: >
+      This is a dbt model that selects various date-related columns from the dim_dates table
+      in the dev_warehouse schema of the deel_analytics database.
+    columns:
+      - name: _date_day
+        description: The date in the format YYYY-MM-DD.
+        tests: [unique, not_null]
+      - name: day
+        description: The day of the month.
+      - name: month
+        description: The month of the year.
+      - name: week
+        description: The week of the year.
+      - name: year
+        description: The year.
+      - name: week_num
+        description: The week number within the year.
+      - name: dayname
+        description: The name of the day of the week.
+      - name: day_of_week
+        description: The numeric representation of the day of the week.
+      - name: days_of_month
+        description: The total number of days in the month.
+
+  - name: fct_globepay_report
+    description: >
+      This is a dbt model that join different columns from models of Globalpay Repórt 
+      the table are allowed in the deel_analytics.dev_warehouse schema.
+    columns:
+          - name: _date_time
+            description: The date and time of the transaction.
+            tests: [not_null]
+          - name: _date_day
+            description: The date of the transaction in the format YYYY-MM-DD.
+          - name: _hour
+            description: The hour of the transaction.
+          - name: country_code
+            description: The country code associated with the transaction.
+          - name: external_ref
+            description: The external reference for the transaction.
+            tests: [not_null, unique]
+          - name: status
+            description: The status of the transaction.
+          - name: source
+            description: The source of the transaction.
+          - name: ref
+            description: The reference for the transaction.
+          - name: state
+            description: The state of the transaction.
+          - name: cvv_provided
+            description: A boolean flag indicating whether CVV information was provided for the transaction.
+          - name: amount_lc
+            description: The amount of the transaction in the local currency.
+          - name: amount_usd
+            description: The amount of the transaction in US dollars.
+          - name: currency
+            description: The currency code of the transaction.
+            tests:
+              - not_null
+              - relationships:
+                  to: ref('dim_countries')
+                  field: currency_code
+
+          - name: chargeback_status
+            description: The status of a chargeback for the transaction.
+          - name: chargeback_source
+            description: The source of a chargeback for the transaction.
+          - name: is_chargeback
+            description: A boolean flag indicating whether the transaction is a chargeback.
+          - name: updated_at
+            description: The last updated timestamp of this model.
+            tests: [not_null]

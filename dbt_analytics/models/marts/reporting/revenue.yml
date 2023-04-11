@@ -1,0 +1,18 @@
+version: 2
+
+metrics:
+  - name: revenue
+    label: revenue
+    model: ref('rpt_globepay')
+    calculation_method: sum
+    expression: amount_usd
+
+    timestamp: _date_time
+    time_grains: [day, week]
+
+    config:
+      enabled: True
+
+    dimensions:
+      - country_code
+

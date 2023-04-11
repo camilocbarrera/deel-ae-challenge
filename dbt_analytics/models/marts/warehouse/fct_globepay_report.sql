@@ -11,7 +11,7 @@ SELECT
      stg_globepay__acceptance_report._date_time        AS _date_time
    , _date_time::date                                  AS _date_day
    , hour( _date_time )                                AS _hour
-   , stg_globepay__acceptance_report.country           AS country
+   , stg_globepay__acceptance_report.country           AS country_code
    , stg_globepay__acceptance_report.external_ref      AS external_ref
    , stg_globepay__acceptance_report.status            AS status
    , stg_globepay__acceptance_report.source            AS source
