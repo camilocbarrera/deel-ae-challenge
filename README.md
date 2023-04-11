@@ -87,8 +87,8 @@ Power bi has a native connector that allows us to do this.
 In this URL, you can find the report Online
 The main idea of this report is to be able to answer questions about the business context.
 Due to the semantic layer in dbt, it is possible to create and document metrics so that they are physically materialized in the warehouse. The advantage of this is that we can control the way certain measures are added and calculated.
+https://app.powerbi.com/view?r=eyJrIjoiYmQ3MGM0OTEtOGQyZi00ZDdjLTk1ZjEtNDg3OTc2Mjc1N2RiIiwidCI6Ijc0YzBjMjUwLTFjNzctNDA1ZC05YjFlLTlhYzFmNTA4YWJlMyIsImMiOjR9
 
-<iframe title="deel-report - Page 1" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiYmQ3MGM0OTEtOGQyZi00ZDdjLTk1ZjEtNDg3OTc2Mjc1N2RiIiwidCI6Ijc0YzBjMjUwLTFjNzctNDA1ZC05YjFlLTlhYzFmNTA4YWJlMyIsImMiOjR9" frameborder="0" allowFullScreen="true"></iframe>
 
 # Part 2: Query implementation
 
