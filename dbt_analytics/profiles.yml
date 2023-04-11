@@ -1,3 +1,4 @@
+dbt_analytics:
   outputs:
     dev:
       account: "{{ env_var('SNOWFLAKE_ACCOUNT_DBT') }}"
