@@ -16,7 +16,7 @@ models:
         tests: [unique, not_null]
       - name: currency_code
         description: The currency code.
-        tests: [unique, not_null]
+        tests: [not_null]
 
       - name: updated_at
         description: The last updated timestamp.

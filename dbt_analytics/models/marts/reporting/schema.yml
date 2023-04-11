@@ -4,6 +4,17 @@ version: 2
 
 
 models:
+  - name: rpt_daily_acceptance_rate.sql
+    description: >
+      This model is for reporting purposes, has the responsibility to calculate the acceptance rate by day.
+    columns:
+      - name: date_time
+        description: "date time when the transaction was created"
+        tests: [not_null, unique]
+      - name: acceptance_rate
+        description: "The acceptance rate is measured, with the total number of transactions accepted over
+         the total number of transactions made on a given day."
+
   - name: rpt_globepay
     description: >
       This model is for reporting purposes, it already has different joins to be able to filter at different granularities,
