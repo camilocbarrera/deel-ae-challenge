@@ -25,7 +25,7 @@ models:
   dbt_analytics:
 
     staging:
-      +materialized: view # as a view to avoid redundancy on de data sources
+      +materialized: table # as a view to avoid redundancy on de data sources
       +schema: staging
 
     marts:
